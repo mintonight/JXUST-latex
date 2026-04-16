@@ -2,6 +2,8 @@
 
 江西理工大学本科毕业设计（论文）LaTeX 模板。该目录基于现有 Word 版式整理而成，适合继续完善后放到 GitHub 共享与维护。
 
+![image-20260416162529114](C:\Users\zkbot\Desktop\JXUST-latex\figures\image-20260416162529114.png)
+
 ## 项目内容
 
 - `thesis_template.tex`：精简后的空白模板，适合直接开始写论文
@@ -116,30 +118,11 @@ xelatex -interaction=nonstopmode -halt-on-error thesis_template.tex
 - 修改图片：将图片放到 `figures/`，再在 `.tex` 中替换文件名
 - 修改表格：模板默认使用 `booktabs` 三线表
 
-## 提交到 GitHub 的建议
-
-建议保留以下文件：
-
-- `README.md`
-- `jxust-setup.tex`
-- `thesis_template.tex`
-- `figures/`
-- `build.bat`
-- `.gitignore`
-
-不建议提交编译中间文件，例如：
-
-- `.aux`
-- `.log`
-- `.out`
-- `.synctex.gz`
-
 ## 说明
 
 这个版本只保留模板文件，不包含你的论文正文内容。当前目标是“接近当前 Word 稿件版式并可稳定编译”，不是对学校官方模板的逐项规范复刻。如果后续要继续公开维护，建议再补：
 
 - 官方封面页
-- 任务书与声明页
 - 自动目录
 - 更严格的参考文献样式
 - 更完整的公式转写
