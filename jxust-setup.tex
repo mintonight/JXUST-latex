@@ -1,0 +1,133 @@
+% Common preamble and formatting commands for the JXUST LaTeX template.
+\usepackage{geometry}
+\geometry{
+  top=2.54cm,
+  bottom=2.54cm,
+  left=3.18cm,
+  right=3.18cm,
+  headheight=14pt,
+  headsep=0.8cm,
+  footskip=1.0cm
+}
+
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+\setCJKsansfont{SimHei}
+\setmonofont{Courier New}
+
+\newcommand{\wordmainfont}{\fontsize{12pt}{20pt}\selectfont}
+\AtBeginDocument{\wordmainfont}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\hypersetup{
+  unicode=true,
+  pdfpagelabels=true,
+  bookmarksopen=true,
+  bookmarksopenlevel=2
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{江西理工大学2026届本科毕业设计（论文）}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\captionsetup{font=small,labelsep=space}
+
+\newcounter{bookmarkchapter}
+\newcounter{bookmarksection}[bookmarkchapter]
+\newcounter{bookmarksubsection}[bookmarksection]
+
+\newcommand{\chaptertitle}[1]{%
+  \refstepcounter{bookmarkchapter}%
+  \setcounter{bookmarksection}{0}%
+  \setcounter{bookmarksubsection}{0}%
+  \pdfbookmark[0]{#1}{bk-ch-\thebookmarkchapter}%
+  \begin{center}
+    \heiti\zihao{3} #1
+  \end{center}
+  \vspace{0.8\baselineskip}
+}
+
+\newcommand{\sectiontitle}[1]{%
+  \refstepcounter{bookmarksection}%
+  \setcounter{bookmarksubsection}{0}%
+  \pdfbookmark[1]{#1}{bk-sec-\thebookmarkchapter-\thebookmarksection}%
+  \vspace{0.6\baselineskip}
+  \noindent{\heiti\zihao{4} #1}\par
+  \vspace{0.3\baselineskip}
+}
+
+\newcommand{\subsectiontitle}[1]{%
+  \refstepcounter{bookmarksubsection}%
+  \pdfbookmark[2]{#1}{bk-sub-\thebookmarkchapter-\thebookmarksection-\thebookmarksubsection}%
+  \vspace{0.4\baselineskip}
+  \noindent{\heiti\zihao{-4} #1}\par
+  \vspace{0.2\baselineskip}
+}
+
+\newcommand{\cnabstractpara}[1]{%
+  {\wordmainfont\setlength{\parindent}{2em}\indent #1\par}
+}
+
+\newcommand{\enabstractpara}[1]{%
+  {\wordmainfont\setlength{\parindent}{4em}\indent #1\par}
+}
+
+\newcommand{\cnkeywordline}[1]{%
+  {\wordmainfont\noindent{\heiti 关键词：}#1\par}
+}
+
+\newcommand{\enkeywordline}[1]{%
+  {\wordmainfont\noindent{\bfseries Keywords:} #1\par}
+}
+
+\newcommand{\bodypara}[1]{%
+  {\wordmainfont\setlength{\parindent}{2em}\indent #1\par}
+}
+
+\newcommand{\firstbodypara}[1]{%
+  \par\addvspace{9pt}%
+  {\wordmainfont\setlength{\parindent}{2em}\indent #1\par}
+}
+
+\newcommand{\compactpara}[1]{%
+  \par\addvspace{3pt}%
+  {\wordmainfont\noindent #1\par}%
+  \addvspace{3pt}
+}
+
+\newenvironment{wordreferences}{\par}{\par}
+
+\newcommand{\referenceentry}[2]{%
+  {\wordmainfont\noindent[#1]\quad #2\par}
+}
+
+\newcommand{\placeholderfigurebox}[1]{%
+  \fbox{\parbox[c][0.22\textheight][c]{0.72\textwidth}{\centering #1}}
+}
+
+\newcommand{\placeholdertablebox}[1]{%
+  \fbox{\parbox[c][0.15\textheight][c]{0.78\textwidth}{\centering #1}}
+}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\newcommand{\equationplaceholder}[1]{%
+  \begin{center}
+    \fbox{\parbox{0.82\textwidth}{\centering #1}}
+  \end{center}
+}
