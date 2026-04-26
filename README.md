@@ -2,6 +2,8 @@
 
 江西理工大学本科毕业设计（论文）LaTeX 模板，基于学校 Word 版式整理而成。
 
+如果用Agent工具写论文，最好之后还是导出一个word版本，学校老师大概率要看。
+
 ![image-20260416162529114](figures/image-20260416162529114.png)
 
 ## 项目结构
@@ -124,7 +126,7 @@ xelatex -interaction=nonstopmode -halt-on-error thesis_template.tex
 
 # skill
 
-如果想要用claude code、codex等工具来写论文，可以参考一下项目中的skill：
+如果想要用claude code、codex等工具来写论文，可以参考一下项目中的skill：   
 best skills:https://github.com/xstongxue/best-skills
 
 > 包含答辩ppt制作+论文辅助写作+ai降重
