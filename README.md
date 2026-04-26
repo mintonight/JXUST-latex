@@ -121,3 +121,11 @@ xelatex -interaction=nonstopmode -halt-on-error thesis_template.tex
 | 图表题注样式 | `jxust-setup.tex` | `\captionsetup{...}` |
 | 图片替换 | `thesis_template.tex` | `\includegraphics{...}` |
 | 封面文件替换 | 项目根目录 | `附件6.本科毕业设计（论文）封面和封底.doc` |
+
+# skill
+
+如果想要用claude code、codex等工具来写论文，可以参考一下项目中的skill：
+best skills:https://github.com/xstongxue/best-skills
+
+> 包含答辩ppt制作+论文辅助写作+ai降重
+
