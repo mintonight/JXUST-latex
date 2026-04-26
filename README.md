@@ -129,3 +129,6 @@ best skills:https://github.com/xstongxue/best-skills
 
 > 包含答辩ppt制作+论文辅助写作+ai降重
 
+humanize-chinese: https://github.com/voidborne-d/humanize-chinese
+
+> 免费本地 AI 文本去痕迹工具，更好用、更专业的去中文写作AI率
